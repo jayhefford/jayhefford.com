@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jay Hefford – Artwork</title>
+  <meta name="description" content="Artwork by Jay Hefford.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="site-name" href="#top">Jay Hefford</a>
+    <nav aria-label="Main">
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#links">Links</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- GALLERY
+         To add a piece, copy one <a class="piece"> block below and change:
+           href  = the full-size image shown in the lightbox
+           src   = the image shown in the grid (can be the same file)
+           width/height = the image's real pixel size (prevents the page from jumping while loading)
+           alt   = a short description of the artwork -->
+    <section id="gallery" aria-label="Gallery">
+      <div class="grid">
+
+        <a class="piece" href="images/artwork-1.svg">
+          <img src="images/artwork-1.svg" width="800" height="1000" alt="Placeholder artwork 1" loading="lazy">
+        </a>
+
+        <a class="piece" href="images/artwork-2.svg">
+          <img src="images/artwork-2.svg" width="1000" height="700" alt="Placeholder artwork 2" loading="lazy">
+        </a>
+
+        <a class="piece" href="images/artwork-3.svg">
+          <img src="images/artwork-3.svg" width="800" height="800" alt="Placeholder artwork 3" loading="lazy">
+        </a>
+
+        <a class="piece" href="images/artwork-4.svg">
+          <img src="images/artwork-4.svg" width="800" height="1100" alt="Placeholder artwork 4" loading="lazy">
+        </a>
+
+        <a class="piece" href="images/artwork-5.svg">
+          <img src="images/artwork-5.svg" width="1100" height="750" alt="Placeholder artwork 5" loading="lazy">
+        </a>
+
+        <a class="piece" href="images/artwork-6.svg">
+          <img src="images/artwork-6.svg" width="800" height="900" alt="Placeholder artwork 6" loading="lazy">
+        </a>
+
+      </div>
+    </section>
+
+    <section id="about" class="text-section">
+      <h2>About</h2>
+      <p>Write two or three sentences about yourself and your work here.</p>
+    </section>
+
+    <section id="links" class="text-section">
+      <h2>Find me elsewhere</h2>
+      <!-- Replace each "#" with your real profile address. Delete lines you don't need. -->
+      <ul class="link-list">
+        <li><a href="#" rel="me noopener" target="_blank">Instagram</a></li>
+        <li><a href="#" rel="me noopener" target="_blank">ArtStation</a></li>
+        <li><a href="#" rel="me noopener" target="_blank">X</a></li>
+        <li><a href="#" rel="me noopener" target="_blank">Patreon</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Jay Hefford. All artwork is copyrighted. Do not copy, repost, or use it without permission.</p>
+  </footer>
+
+  <!-- Lightbox: shows a clicked image at large size -->
+  <dialog id="lightbox" aria-label="Enlarged artwork">
+    <button type="button" class="lb-btn lb-close" aria-label="Close">&times;</button>
+    <button type="button" class="lb-btn lb-prev" aria-label="Previous image">&#8249;</button>
+    <figure>
+      <img id="lb-image" src="" alt="">
+      <figcaption id="lb-caption"></figcaption>
+    </figure>
+    <button type="button" class="lb-btn lb-next" aria-label="Next image">&#8250;</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
