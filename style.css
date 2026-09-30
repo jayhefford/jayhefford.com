@@ -78,6 +78,42 @@ a {
   text-decoration-color: var(--accent);
 }
 
+/* ---------- Social links ----------
+   A row of icons above the gallery. Icons use the text colour
+   and turn gold on hover. */
+.social {
+  padding: 8px var(--page-pad) 20px;
+}
+
+.icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.icon-list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.icon-list a:hover {
+  color: var(--accent);
+}
+
+.icon-list svg {
+  width: 24px;
+  height: 24px;
+}
+
 /* ---------- Gallery ----------
    Columns place images top to bottom, then start the next column.
    Images keep their own proportions, so nothing is cropped. */
@@ -116,6 +152,7 @@ a {
 @media (max-width: 560px) {
   .grid { column-count: 1; }
   .site-header { flex-direction: column; gap: 4px; }
+  .icon-list { gap: 0; }
 }
 
 /* ---------- Text sections ---------- */
@@ -137,14 +174,6 @@ a {
   color: var(--muted);
 }
 
-.link-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 28px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 
 /* ---------- Footer ---------- */
 .site-footer {
@@ -234,4 +263,5 @@ a {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .piece img { transition: none; }
+  .icon-list a { transition: none; }
 }
